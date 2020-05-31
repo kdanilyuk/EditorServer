@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200412200444_Initial.cs" />
+    <Compile Remove="Migrations\20200412200444_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200412222550_Initial2.cs" />
+    <Compile Remove="Migrations\20200412222550_Initial2.Designer.cs" />
+    <Compile Remove="Migrations\20200412223521_Initial3.cs" />
+    <Compile Remove="Migrations\20200412223521_Initial3.Designer.cs" />
+    <Compile Remove="Migrations\20200412223805_Initial3.cs" />
+    <Compile Remove="Migrations\20200412223805_Initial3.Designer.cs" />
+    <Compile Remove="Migrations\20200412223858_Initial3.cs" />
+    <Compile Remove="Migrations\20200412223858_Initial3.Designer.cs" />
+    <Compile Remove="Migrations\20200412224134_Initial3.cs" />
+    <Compile Remove="Migrations\20200412224134_Initial3.Designer.cs" />
+    <Compile Remove="Migrations\20200412224357_Initial3.cs" />
+    <Compile Remove="Migrations\20200412224357_Initial3.Designer.cs" />
+    <Compile Remove="Migrations\20200412224516_Initial5.cs" />
+    <Compile Remove="Migrations\20200412224516_Initial5.Designer.cs" />
+    <Compile Remove="Migrations\20200412224729_Initial5.cs" />
+    <Compile Remove="Migrations\20200412224729_Initial5.Designer.cs" />
+    <Compile Remove="Migrations\20200412224958_Initial5.cs" />
+    <Compile Remove="Migrations\20200412224958_Initial5.Designer.cs" />
+    <Compile Remove="Migrations\20200412225151_Initial5.cs" />
+    <Compile Remove="Migrations\20200412225151_Initial5.Designer.cs" />
+    <Compile Remove="Migrations\20200413185051_Initial6.cs" />
+    <Compile Remove="Migrations\20200413185051_Initial6.Designer.cs" />
+    <Compile Remove="Migrations\20200413185151_Initial6.cs" />
+    <Compile Remove="Migrations\20200413185151_Initial6.Designer.cs" />
+    <Compile Remove="Migrations\20200413185235_Initial6.cs" />
+    <Compile Remove="Migrations\20200413185235_Initial6.Designer.cs" />
+    <Compile Remove="Migrations\20200413185339_Initial7.cs" />
+    <Compile Remove="Migrations\20200413185339_Initial7.Designer.cs" />
+    <Compile Remove="Migrations\20200413185936_Initial.cs" />
+    <Compile Remove="Migrations\20200413185936_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200413190342_Initial.cs" />
+    <Compile Remove="Migrations\20200413190342_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200413190952_Initial.cs" />
+    <Compile Remove="Migrations\20200413190952_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200413192536_Initial.cs" />
+    <Compile Remove="Migrations\20200413192536_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200413192743_Initial.cs" />
+    <Compile Remove="Migrations\20200413192743_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200413193151_Initial.cs" />
+    <Compile Remove="Migrations\20200413193151_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200518152019_CascadeDelete.cs" />
+    <Compile Remove="Migrations\20200518152019_CascadeDelete.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+
+</Project>
