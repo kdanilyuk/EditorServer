@@ -130,9 +130,6 @@ D:\EditorApp\EditorServer\EditorServer\bin\Debug\netcoreapp3.1\runtimes\win\lib\
 D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\EditorServer.csprojAssemblyReference.cache
 D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\EditorServer.AssemblyInfoInputs.cache
 D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\EditorServer.AssemblyInfo.cs
-D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\EditorServer.csproj.CoreCompileInputs.cache
-D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\EditorServer.MvcApplicationPartsAssemblyInfo.cs
-D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\EditorServer.MvcApplicationPartsAssemblyInfo.cache
 D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\EditorServer.RazorTargetAssemblyInfo.cache
 D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\EditorServer.csproj.CopyComplete
 D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\staticwebassets\EditorServer.StaticWebAssets.Manifest.cache
@@ -140,3 +137,9 @@ D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\staticwebassets\E
 D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\EditorServer.dll
 D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\EditorServer.pdb
 D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\EditorServer.genruntimeconfig.cache
+D:\EditorApp\EditorServer\EditorServer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\EditorApp\EditorServer\EditorServer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\EditorApp\EditorServer\EditorServer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\EditorServer.csproj.CoreCompileInputs.cache
+D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\EditorServer.MvcApplicationPartsAssemblyInfo.cs
+D:\EditorApp\EditorServer\EditorServer\obj\Debug\netcoreapp3.1\EditorServer.MvcApplicationPartsAssemblyInfo.cache

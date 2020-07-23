@@ -12,6 +12,7 @@ namespace EditorServer.Models
         public string Description { get; set; }
         public int SubjectId { get; set; }
         public int? ParentId { get; set; }
+        public int ParentOrder { get; set; }
         public int AuthorId { get; set; }
         public string Text { get; set; }
     }

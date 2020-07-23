@@ -12,8 +12,8 @@ namespace EditorServer.Services
 {
     public interface IDocumentService
     {
-        IEnumerable<DocumentPreviewTree> GetTreeDocumentsBySubjectId(int subjectId);
-        DocumentPreview GetDocument(int documentId);
+        IEnumerable<DocumentPreview> GetDocumentsBySubjectId(int subjectId);
+        IEnumerable<DocumentsTree> GetDocumentsTreeBySubjectId(int subjectId);
         DocumentPreview GetFullContent(int documentId);
         IActionResult UpdateDocument(DocumentPreview document);
         IActionResult RemoveDocument(int documentId);
@@ -27,11 +27,6 @@ namespace EditorServer.Services
         {
             _documentContext = contextFactory.CreateDbContext<DocumentContext>();
             _mapper = mapper;
-        }
-
-        public DocumentPreview GetDocument(int documentId)
-        {
-            return _mapper.Map<DocumentPreview>(_documentContext.Documents.Find(documentId));
         }
 
         public DocumentPreview GetFullContent(int documentId)
@@ -53,7 +48,7 @@ namespace EditorServer.Services
                 {
                     if (!document.Childrens.Any())
                     {
-                        content.Append($"<doc:{document.Id}>{document.Text}</doc:{document.Id}><br>");
+                        content.Append(document.Text);
                     }
                     else
                     {
@@ -67,28 +62,30 @@ namespace EditorServer.Services
             return _mapper.Map<DocumentPreview>(document);
         }
 
-        public IEnumerable<DocumentPreviewTree> GetTreeDocumentsBySubjectId(int subjectId)
+        public IEnumerable<DocumentPreview> GetDocumentsBySubjectId(int subjectId) // Надо убрать
+        {
+            var parentNodes = _documentContext.Documents.Where(d => d.SubjectId == subjectId);
+
+            return _mapper.Map<IEnumerable<DocumentPreview>>(parentNodes);
+        }
+
+        public IEnumerable<DocumentsTree> GetDocumentsTreeBySubjectId(int subjectId)
         {
             var parentNodes = _documentContext.Documents.Where(d => d.SubjectId == subjectId && d.ParentId == null);
 
-            if(!parentNodes.Any())
-            {
-                throw new Exception("There no books for this subject.");
-            }
-
-            return parentNodes.Select(book => new DocumentPreviewTree() 
+            return parentNodes.Select(book => new DocumentsTree()
             {
                 Id = book.Id,
                 Name = book.Name,
-                Children = book.Childrens.Select(section => new DocumentPreviewTree() 
+                Children = book.Childrens.Select(section => new DocumentsTree()
                 {
                     Id = section.Id,
                     Name = section.Name,
-                    Children = section.Childrens.Select(subsection => new DocumentPreviewTree() 
+                    Children = section.Childrens.Select(subsection => new DocumentsTree()
                     {
                         Id = subsection.Id,
                         Name = subsection.Name,
-                        Children = subsection.Childrens.Select(paragraph => new DocumentPreviewTree() 
+                        Children = subsection.Childrens.Select(paragraph => new DocumentsTree()
                         {
                             Id = paragraph.Id,
                             Name = paragraph.Name
@@ -102,7 +99,7 @@ namespace EditorServer.Services
         {
             var documentDTO = _mapper.Map<DocumentDTO>(document);
 
-            if(documentDTO.Id == 0) //Save new document
+            if (documentDTO.Id == 0) //Save new document
             {
                 _documentContext.Documents.Add(documentDTO);
             }
@@ -130,7 +127,7 @@ namespace EditorServer.Services
         {
             var document = _documentContext.Documents.Find(documentId);
 
-            if(document == null)
+            if (document == null)
             {
                 return new NotFoundResult();
             }
@@ -152,6 +149,6 @@ namespace EditorServer.Services
             _documentContext.SaveChanges();
 
             return new OkResult();
-        } 
+        }
     }
 }

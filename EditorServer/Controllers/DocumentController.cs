@@ -17,17 +17,17 @@ namespace EditorServer.Controllers
         }
 
         [HttpGet]
-        [Route("get-tree")]
-        public IEnumerable<DocumentPreviewTree> GetTreeDocumentsBySubjectId(int subjectId)
+        [Route("get-documents")]
+        public IEnumerable<DocumentPreview> GetDocumentsBySubjectId(int subjectId)
         {
-            return _documentService.GetTreeDocumentsBySubjectId(subjectId);
+            return _documentService.GetDocumentsBySubjectId(subjectId);
         }
 
         [HttpGet]
-        [Route("get-document")]
-        public DocumentPreview GetDocument (int documentId)
+        [Route("get-documents-tree")]
+        public IEnumerable<DocumentsTree> GetDocumentsTreeBySubjectId(int subjectId)
         {
-            return _documentService.GetDocument(documentId);
+            return _documentService.GetDocumentsTreeBySubjectId(subjectId);
         }
 
         [HttpGet]

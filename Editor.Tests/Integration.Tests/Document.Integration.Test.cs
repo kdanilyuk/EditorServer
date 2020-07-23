@@ -44,8 +44,7 @@ namespace Editor.Tests.Integration.Tests
         }
 
         [Fact]
-
-        public async Task GetDocumentBySubjectIdTest()
+        public async Task GetDocumentsTest()
         {
             var client = _factory.CreateClient(new WebApplicationFactoryClientOptions
             {
@@ -59,9 +58,9 @@ namespace Editor.Tests.Integration.Tests
                 WriteIndented = true
             };
 
-            var response = await client.GetAsync("api/documents/get-tree?subjectId=1");
+            var response = await client.GetAsync("api/documents/get-documents?subjectId=1");
             var responseString = response.Content.ReadAsStringAsync();
-            var body = JsonSerializer.Deserialize<IEnumerable<DocumentPreviewTree>>(responseString.Result, serializeOptions);
+            //var body = JsonSerializer.Deserialize<IEnumerable<DocumentPreviewTree>>(responseString.Result, serializeOptions);
 
             Assert.True(true);
         }
